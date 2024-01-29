@@ -9,8 +9,7 @@ exports.createComment = async (req, res, next) => {
 		const comment = {
 			blogId: req.body.blogId,
 			commenterId: req.userData.id,
-			content: req.body.content,
-			userId: req.userData.id
+			content: req.body.content, 
 		};
 
 		const blog = await blogService.getBlog(comment.blogId);
